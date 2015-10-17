@@ -1,0 +1,485 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+   
+    width:100%;
+}
+
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+ .ui-panel-inner {
+     padding:0px;
+ }
+ .ui-controlgroup {
+     margin:0;
+ }
+
+ /*  Start Header CSS  */
+
+#header{
+     background-color: #ffcb04;
+ }
+
+#home #header{
+    height: 100px;
+}
+
+#header h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 1%;
+}
+
+.ui-header{
+    border-bottom-width: 0 !important;
+}
+
+#divInputSearch{
+    background-color: #ffcb04;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#productContent #header{
+   height: 60px;
+}
+
+#favoritePage .ui-header .ui-title{
+    font-size: 1.0em;
+    min-height: 1.1em;
+    text-align: center;
+    display: block;
+    margin: 0 30%;
+    padding: .7em 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: 0 !important;
+    margin-left: -17%;
+    margin-top: 2.5%;
+    margin-bottom: 2%;
+}
+
+
+#bars-button {
+    margin-top: 3%;
+    color: #ffcb04 !important;
+    background-color: #ffcb04;
+    border-color: #ffcb04 !important;
+    border: none;
+    margin-left: 1%;
+}
+
+#productContent #bars-button {
+    margin-top: 3.5%;
+    color: #ffcb04 !important;
+    background-color: #ffcb04;
+    border-color: #ffcb04 !important;
+    border: none;
+    margin-left: 12%;
+}
+
+.ui-icon-backArrow {
+	background: url("../images/backArrow.png") no-repeat;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0 !important;
+}
+
+#backArrow{
+    background-color: #ffcb04;
+    width: 6px;
+    height: 6px;
+    padding:10px !important;
+    border: 0;
+    left: 3.5%;
+    top: 28%;
+}
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-backArrow {
+		background-image: url("../images/backArrow.png");
+		background-size: 18px 18px;
+	}
+	
+}*/
+
+/*  End Header CSS  */
+
+/* Start - All icons */
+
+.lvIcon { 
+    position:absolute; 
+    left: 55%; 
+    top: 0;
+    padding-top: 0%;
+}
+
+.lvIcon_aldi { 
+    position:absolute; 
+    left: 70%; 
+    top: 10%;
+    padding-top: 0%;
+}
+
+.image_aldi{
+    width: 55%;
+}
+
+.lvIcon_walmart { 
+    position:absolute; 
+    left: 65%; 
+    top: 10%;
+    padding-top: 0%;
+}
+
+.image_walmart{
+    width: 65%;
+}
+
+.lvIcon_marianos { 
+    position:absolute; 
+    left: 65%; 
+    top: 10%;
+    padding-top: 0%;
+}
+
+.image_marianos{
+    width: 65%;
+}
+
+.image_wholefoods{
+    width: 65%;
+}
+
+.lvIcon_wholefoods { 
+    position:absolute; 
+    left: 65%; 
+    top: 10%;
+    padding-top: 0%;
+}
+
+.image{
+    width: 65%;
+}
+
+#homeImage{
+    width: 100%;
+    height: 100%;
+}
+
+/* End - All icons */
+
+/* Start - CSS Product Details */
+
+.imageDetailed{
+    width: 100%;
+}
+
+#divImageDetailed{
+    position: relative;
+    display:inline-block;
+    vertical-align:top;
+    top: 20px;
+    width: 40%;
+    margin-bottom: 10%;
+    margin-right: 5%;   
+    overflow-y: auto;
+    padding-bottom: 8%;
+}
+
+.image_detail_aldi{
+    width: 15%;
+    left: 12% !important;
+    top: 12% !important;
+}
+
+.image_detail_wholefoods{
+    width: 25%;
+    left: 8% !important;
+    top: 7% !important;
+}
+
+.productPriceDetails{
+    font-weight:bold;
+    font-size:18px;
+    width:40%;
+    color: #2189e0;
+    margin-left: 70%;
+    margin-top: 7%;
+}
+
+img{
+    cursor: pointer;
+}
+
+#informationDetailed{
+    display:inline-block;
+    width: 50%;
+    padding-bottom: 10%;
+}
+
+#details > .divImageDetailed{
+    display:inline-block;
+    vertical-align:top;
+    width: 40%;
+    margin-bottom: 10%;
+    margin-right: 5%; 
+}
+
+#divSocialMedia{
+   position: absolute;
+   float: right;
+   width: 20%;
+}
+
+#productName{
+    font-size:14px;   
+    font-weight:bold;
+    margin-bottom: 14%;
+    width:100%;
+}
+
+#startingAt{
+    font-size: 12px;
+    color: #7f7f7f;
+    margin-bottom: 8%;
+}
+
+#productPrice{
+    font-weight:bold;
+    width:40%;
+    color: #2189e0;
+}
+
+#footerDetails{
+    text-align: center;
+    font-size:12px;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top:17%;
+    border-radius: 25px;
+}
+
+/* End - CSS Product Details */
+
+/* Start - CSS Favorites */
+
+.favorites{
+    margin-top: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-bottom: 1px;
+    padding-top: 3%;
+    background-color: white;
+    cursor: pointer;
+}
+
+body #favoritePage{
+    background-color: #f5f5f5;
+}
+
+#favoritePage .ui-content{
+    padding-top: 1% !important;
+}
+
+.divImageDetailed{
+    display:inline-block;
+    vertical-align:top;
+    width: 40%;
+    margin-bottom: 10%;
+    margin-right: 5%;   
+}
+
+.informationDetailed{
+    display:inline-block;
+    width: 50%;
+   
+    max-height: 100px;
+}
+
+/* End - CSS Favorites */
+
+/* Start - Make page darker*/
+        
+#shadow {
+    background-image:url(../images/shade1x1.png); 
+    position:absolute; 
+    left:0; top:0; width:100%; 
+    z-index:100;
+}
+
+#shadow_header{
+    background-image:url(../images/shade1x1.png); 
+    position:absolute; 
+    left:0; top:0; width:100%; 
+    z-index:100;
+}
+
+#shadow1 {
+    background-image:url(../images/shade1x1.png); 
+    position:absolute; 
+    left:0; top:0; width:100%; 
+    z-index:100;
+}
+
+#main .ui-listview .ui-li-has-thumb > img:first-child, #main .ui-listview .ui-li-has-thumb > .ui-btn > img:first-child, #main .ui-listview .ui-li-has-thumb .ui-li-thumb {
+    position: absolute;
+    left: 2% !important;
+    top: 10% !important;
+    max-height: 5em;
+    max-width: 5em;
+}
+
+.turnedOff {
+    color:#ffff00; 
+}
+
+/* End - Make page darker*/
+
+
+/* color of listview icon */
+ ul.ui-nodisc-icon .ui-btn:after {
+    background-color: #ffcb04;
+}
+
+.ui-icon-star:after{
+    background-color: #ffcb04 !important;
+}
+
+.ui-icon-home:after{
+    background-color: #ffcb04 !important;
+}
+
+.ui-icon-grid:after{
+    background-color: #ffcb04 !important;
+}
+
+.ui-icon-back:after{
+    background-color: #ffcb04 !important;
+}
+
+.ui-panel-inner{
+   padding: 0 !important;
+}
+
+#navpanel .ui-btn,label.ui-btn{
+    border-style: none !important;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+h2{
+    font:bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 12%;   
+}
+
+div.ui-input-search { 
+    margin: 0;
+}
+
+.ui-input-has-clear {
+    padding-right: 1.975em !important;
+}
+
+.ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#divListContent{
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 8%;
+}
+
+.ui-input-text, .ui-input-search {
+    margin: .5em 0;
+    border-width: 0px !important;
+    border-style: solid;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SalesMarket</title>
+    <!-- SalesMarket references -->
+    <link href="css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+<body>
+
+    <div data-role="page" id="home" data-theme="a">
+        <div id="header" data-role="header" data-position="fixed">
+            <h1>Sales Market</h1>
+            <a id="bars-button" data-icon="bars" class="ui-nodisc-icon" data-iconpos="notext" href="#navpanel" data-iconshadow="false" data-shadow="false"></a>
+            <input id="homePageSearch" type="search" placeholder="What are you looking for today?" />
+        </div>
+        <div data-role="panel" id="navpanel" class="ui-panel-inner" data-display="overlay" data-position="left" data-position-fixed="true">
+            <img id="homeImage" src="home_image.jpg" />
+            <div data-role="controlgroup" data-corners="false">
+                <a href="index.html" data-icon="home" data-role="button">Home</a>
+                <a href="#" data-icon="star" data-role="button">Favorites</a>
+                <a href="category.html" data-icon="grid" data-role="button">Category</a>
+                <a href="#" data-icon="back" data-role="button">Search History</a>
+            </div>
+        </div>
+        <div role="main" data-role="content">
+            <div>
+                <h2>Sales of the day</h2>
+                <ul id="salesOfDay" data-role="listview">
+                    <li>
+                        <a href="#productContent" data-transition="slidedown">
+                            <img src="images/apple.jpg" />
+                            <p name="pName">Apple</p>
+                            <h3 name="pPrice">$0.3</h3>
+                            <span class="lvIcon">
+                                <img class="image" src="images/aldi.jpg" />
+                            </span>
+                        </a>
+
+                    </li>
+ 
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

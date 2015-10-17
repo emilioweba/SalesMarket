@@ -1,0 +1,20 @@
+{
+    "cordova-plugin-social-message": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Emilio\\documents\\visual studio 2013\\Projects\\SalesMarket\\SalesMarket\\plugins\\cordova-plugin-social-message"
+        }
+    },
+    "cordova-plugin-x-socialsharing": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Emilio\\documents\\visual studio 2013\\Projects\\SalesMarket\\SalesMarket\\plugins\\cordova-plugin-x-socialsharing"
+        }
+    },
+    "org.apache.cordova.geolocation": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Emilio\\documents\\visual studio 2013\\Projects\\SalesMarket\\SalesMarket\\plugins\\org.apache.cordova.geolocation"
+        }
+    }
+}

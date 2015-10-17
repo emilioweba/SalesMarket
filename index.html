@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SalesMarket</title>
+    <!-- SalesMarket references -->
+ 
+    <link href="css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+</head>
+<body>
+    <div data-role="page" id="home" data-theme="a">
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <h1>Sales Market</h1>
+            <a id="bars-button" data-icon="bars" class="ui-nodisc-icon lightSwitcher" data-iconpos="notext" href="#navpanel" data-iconshadow="false" data-shadow="false"></a>
+            <div id="divInputSearch">
+                <input id="homePageSearch" type="search" placeholder="What are you looking for today?" />
+            </div>
+            <div id="shadow_header"></div>
+        </div>
+        <div data-role="panel" id="navpanel" class="ui-panel-inner" data-display="overlay" data-position="left" data-position-fixed="true">
+            <a href="#home"> <img id="homeImage" src="home_image.jpg" /> </a>
+            <div data-role="controlgroup" data-corners="false">
+                <a id="closePanel" data-icon="home" data-role="button">Home</a>
+                <a href="#favoritePage" class = "favoritePage" data-icon="star" data-role="button">My Favorites</a>
+                <a href="#" data-icon="grid" data-role="button">Category</a>
+                <a href="#" data-icon="back" data-role="button">Search History</a>
+            </div>
+        </div>
+        <div role="main" data-role="content" id="main">
+            <div id="divListContent">
+                <h2>Sales of the day</h2>
+                <ul id="salesOfDay" data-role="listview" class="ui-nodisc-icon" data-transition="slide">
+                    <!--<li>
+            <a href="#productContent" id="teste" class="goingDetails" data-transition="slide">
+                <img src="images/apple.jpg" />
+                <input type="hidden" id="productID" value="333" />
+                <p name="pName">Apple</p>
+                <h3 name="pPrice">$0.3</h3>
+                <span class="lvIcon">
+                    <img class="image" src="images/aldi.jpg" />
+                </span>
+            </a>
+
+        </li>-->
+                    <!--<li>
+            <a href="#resultsSearch" data-transition="slidedown">
+                <img src="images/banana.jpg" />
+                <p name="pName">Banana</p>
+                <h3 name="pPrice">$0.39</h3>
+                <span class="lvIcon">
+                    <img class="image" src="images/aldi.jpg" />
+                </span>
+            </a>
+
+        </li>-->
+                </ul>
+            </div>
+        </div>
+        <div id="shadow"></div>
+    </div>  
+    <!-- ---------------------- Second Page -------------------->
+    <div id="productContent" data-role="page">
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <h1>Sales Market</h1>
+            <a id="bars-button" data-icon="bars" class="ui-nodisc-icon lightSwitcher" data-iconpos="notext" href="#navpanel1" data-iconshadow="false" data-shadow="false"></a>
+            <a data-icon="backArrow" id="backArrow" class="ui-nodisc-icon" data-shadow="false" href="#home" data-transition="slide" data-direction="reverse"></a>
+            <!--<div id="divInputSearch">
+            <input id="homePageSearch" type="search" placeholder="What are you looking for today?" />
+        </div>-->
+            <div id="shadow_header"></div>
+        </div>
+        <div data-role="panel" id="navpanel1" class="ui-panel-inner" data-display="overlay" data-position="left" data-position-fixed="true">
+            <a href="#home"> <img id="homeImage" src="home_image.jpg" /> </a>
+            <div data-role="controlgroup" data-corners="false">
+                <a href="#home" data-icon="home" data-role="button" data-transition="slide">Home</a>
+                <a href="#favoritePage" class="favoritePage" data-icon="star" data-role="button">My Favorites</a>
+                <a href="#" data-icon="grid" data-role="button">Category</a>
+                <a href="#" data-icon="back" data-role="button">Search History</a>
+            </div>
+        </div>
+        <div role="main" data-role="content" id="details">
+               <!--<div id="divImageDetailed">
+                    <img class="imageDetailed" src="images/apple.jpg" />
+                </div>
+                <div id="informationDetailed">
+                    
+                    <div id="productName">Texto with bananaa so good</div>
+
+                    <div id="startingAt">starting at:</div>
+
+                    <div id="productPrice">$0.3</div>
+
+                    <div id="divSocialMedia">
+                        <a id="favoriteBtn">
+                            <img id="imgFavorite" src="images/favorite.png" />
+                            <img id="imgFavoriteFilled" src="images/heartFilled.png" hidden />
+                        </a>
+                        <a id="socialMediaBtn">
+                            <img src="images/shareIcon.png" />
+                        </a>
+                    </div>
+                </div>
+            <div id="divListContent">
+                <ul id="salesOfDay" data-role="listview" class="ui-nodisc-icon" data-icon="false">
+                    <li>
+                        <input type="hidden" id="productID" value="333" />
+                             <a href="#" id="teste" data-transition="slidedown">
+                            <img class="image_detail_aldi" src="images/aldi.jpg" />
+                            <div class="productPriceDetails">$0.3</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="teste2" data-transition="slidedown">
+                            <img class="image_detail_wholefoods" src="images/whole_foods.png" />
+                            <div class="productPriceDetails">$0.99</div>
+                        </a>
+                    </li>
+                </ul>
+         
+        </div>-->
+            </div>
+        <div data-role="footer" id="footerDetails" hidden>
+            <p id="favAdd" hidden>Added to your favorites!</p>
+            <p id="favRem" hidden>Removed from your favorites!</p>
+        </div>
+        <div id="shadow"></div>
+    </div>
+
+    <!-- ------   Favorites page   --------->
+
+    <div id="favoritePage" data-role="page">
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <h1>Favorites</h1>
+            <a id="bars-button" data-icon="bars" class="ui-nodisc-icon lightSwitcher" data-iconpos="notext" href="#navpanel2" data-iconshadow="false" data-shadow="false"></a>
+            <!--<a data-icon="backArrow" id="backArrow" class="ui-nodisc-icon" data-shadow="false" href="#home" data-transition="slide" data-direction="reverse"></a>-->
+            <!--<div id="divInputSearch">
+            <input id="homePageSearch" type="search" placeholder="What are you looking for today?" />
+        </div>-->
+            <div id="shadow_header"></div>
+        </div>
+        <div data-role="panel" id="navpanel2" class="ui-panel-inner" data-display="overlay" data-position="left" data-position-fixed="true">
+            <a href="#home"><img id="homeImage" src="home_image.jpg" /> </a>
+            <div data-role="controlgroup" data-corners="false">
+                <a href="#home" data-icon="home" data-role="button" data-transition="slide">Home</a>
+                <a id="closePanel1" data-icon="star" data-role="button">My Favorites</a>
+                <a href="#" data-icon="grid" data-role="button">Category</a>
+                <a href="#" data-icon="back" data-role="button">Search History</a>
+            </div>
+        </div>
+        <div role="main" data-role="content" id="favList">
+            
+            <!--<div class="favorites">
+                <div class="divImageDetailed">
+                    <img class="imageDetailed" src="images/banana.jpg" />
+                </div>
+                <div class="informationDetailed">
+                    <input type="hidden" id="productID" value="91" />
+                    <div id="productName">Texto with banana so good</div>
+
+                    <div id="startingAt">starting at:</div>
+
+                    <div id="productPrice">$0.3</div>
+                </div>
+            </div>
+
+            <div class="favorites">
+                <div class="divImageDetailed">
+                    <img class="imageDetailed" src="images/apple.jpg" />
+                </div>
+                <div class="informationDetailed">
+                    <div id="productName">Fuji apple</div>
+
+                    <div id="startingAt">starting at:</div>
+
+                    <div id="productPrice">$0.6</div>
+                </div>
+
+            </div>-->
+
+        </div>
+        <div data-role="footer" id="footerDetails" hidden>
+            <p id="favAdd" hidden>Added to your favorites!</p>
+            <p id="favRem" hidden>Removed from your favorites!</p>
+        </div>
+        <div id="shadow"></div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/SocialSharing.js"></script>
+</body>
+</html>
